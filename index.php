@@ -3,8 +3,8 @@
 	require_once("config.php");
 
 	$usuario = new Usuario();
-	$usuario->login("user", '12345');
-	echo $usuario;
+	////$usuario->login("secreta", "secreta");
+	//echo $usuario;
 
 	//$sql = new Sql();
 	//$usuarios = $sql->select("SELECT * FROM tb_usuarios");
@@ -12,12 +12,15 @@
 	//echo json_encode($usuarios);
 
 //Carrega um usuario
-/*	$root = new Usuario();
+	//$aluno = new Usuario("programador", "testei");
 
-	$root->loadbyId(4);
+	
+	//$aluno->insert();
 
-	echo $root;
-*/
+	//echo $aluno;
+
+	
+
 
 	//Carrega uma lista de usuarios
 
@@ -31,6 +34,14 @@
 	//echo json_encode($search);
 
 	//Carrega um usuário usando o login e a senha
+
+	//Criando um novo usuário
+
+	$usuario = new Usuario();
+	$usuario->loadById(5);
+	$usuario->update("carlos", "moraes");
+
+	echo $usuario;
 
 	
 
